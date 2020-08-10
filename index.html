@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO test</title>
+  </head>
+  <body>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    const socket = io('https://www.ten-x.com/bidding', {path: '/ws-bidding/socket.io'});
+    socket.emit('subscribe', '20017529');
+  </script>
+</html>
