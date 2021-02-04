@@ -8,7 +8,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>
-    const socket = io('https://aws.ci.ten-x.com/bidding', {path: '/ws-bidding/socket.io', transports: [ 'websocket' ]});
+    const socket = io('https://aws.ci.ten-x.com/bidding', {
+      path: '/ws-bidding/socket.io',
+      transports: [ 'websocket' ],
+      withCredentials: true,
+    });
     socket.emit('bidBoxListingSubscribe', { listingId: 20017093 });
   </script>
 </html>
