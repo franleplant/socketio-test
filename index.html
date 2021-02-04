@@ -14,5 +14,13 @@
       withCredentials: true,
     });
     socket.emit('bidBoxListingSubscribe', { listingId: 20017093 });
+
+    const url = "https://aws.ci.ten-x.com/cu/api/-dzbd0g/pal/cre/v2/users/current_user/settings/saved_assets"
+    const res = fetch(url, {
+      mode: "no-cors",
+      credentials: "include"
+    })
+
+    console.log(res)
   </script>
 </html>
